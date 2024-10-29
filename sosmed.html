@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+body {
+  background-color: #272727;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  position: relative;
+  top: 300px;
+  left: 10%;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.back {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  position: relative;
+  top: -25%;
+  left: 0;
+  transition: .4s;
+}
+.back:hover {
+  color: red;
+  position: relative;
+  left: 0.5%;
+  font-size: 30px;
+}
+.container .glass {
+  position: relative;
+  width: 180px;
+  cursor: pointer;
+  height: 200px;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  margin: 0 -45px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+  transform: rotate(0deg);
+  margin: 0 10px;
+}
+
+.container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.container .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
+  </style>
+</head>
+<body>
+  <script src="https://cdn.tailwindcss.com"></script>
+<div class="tengah">
+<div class="container">
+<a href="https://www.instagram.com/nabilgiskyandara/profilecard/?igsh=MWlxcDhreWJvZHEwdg==" target="_blank">
+  <div data-text="Instagram" style="--r:-15;" class="glass">
+     <img style="width: 60px; height: 60px;" src="ig putih.png">
+  </div>
+</a>
+<a target="_blank" href="https://github.com/Nbaaaaaaaaa">
+  <div data-text="Github" style="--r:5;" class="glass">
+    <img style="width: 60px; height: 60px;" src="github.png">
+  </div>
+</a>
+  <a href="https://wa.me/qr/DOGA4WLZGE7MG1" target="_blank">
+  <div data-text="Whatsapp" style="--r:25;" class="glass">
+    <img src="whatsapp-white-icon.png" style="width: 60px; height: 60px;">
+  </div>
+  </a>
+</div>
+<div class="div"></div>
+<div class="div"></div>
+<div class="div"></div>
+<br>
+</div>
+<a class="back" href="index.html"><-</a>
+</body>
+</html>
